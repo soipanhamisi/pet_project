@@ -1,0 +1,28 @@
+
+    .pet-image {
+        width: 100%;
+        height: auto;
+    }
+    .price {
+        font-size: 1.5rem;
+        color: #ff0000;
+    }
+    .discount {
+        text-decoration: line-through;
+        color: #999;
+    }
+    .buy-btn {
+        background-color: #ffcc00;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    .suggestions img {
+        width: 100%;
+        height: auto;
+    }
+    .footer {
+        background-color: #f8f9fa;
+        padding: 20px 0;
+    }
