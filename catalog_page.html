@@ -43,20 +43,24 @@ input[type="text"] {
 }
 .image-grid {
     display: flex;
+    gap: 5px;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
 .image-container {
-    width: 33.33%; /* Adjust width for 3 columns */
+    width: 32%; /* Adjust width for 3 columns */
     text-align: center;
     margin-bottom: 20px;
+    object-fit: fill;
 }
 .image-container img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* This keeps the image responsive */
+    height: 350px; /* Set a fixed height */
+     /* This will crop the image to fit the container */
 }
+
 .image-container p {
     margin: 5px 0;
 }
@@ -75,13 +79,13 @@ input[type="text"] {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="services.html">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Testimonials</a>
@@ -90,7 +94,9 @@ input[type="text"] {
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <button class="navbar-button">login</button>
+                        <a href="login_page.html">
+                            <button class="navbar-button">login</button>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -107,74 +113,74 @@ input[type="text"] {
       </section>
       <section class="image-grid">
         <div class="image-container">
-            <img src="golden-retriever-1.jpg" alt="Golden Retriever 1">
+            <img src="images/pet images/9 African Dog Breeds That Are Affectionate, Brave and Absolutely Adorable.jpeg" alt="Golden Retriever 1">
             <p>Golden Retriever</p>
             <p>21.Sep.2024</p>
             <p>KSH 14500</p>
         </div>
         <div class="image-container">
-            <img src="golden-retriever-2.jpg" alt="Golden Retriever 2">
+            <img src="images/pet images/18b4c27d-9f5f-41a3-b6d3-98d2bd714304.jpeg" alt="Golden Retriever 2">
+            <p>grey cat</p>
+            <p>21.Sep.2024</p>
+            <p>KSH 14500</p>
+        </div>
+        <div class="image-container">
+            <img src="images/pet images/40 Medium-Sized Dog Breeds That Are the Perfect First Pet for Any Family.jpeg" alt="Golden Retriever 2">
+            <p>mountain dog</p>
+            <p>21.Sep.2024</p>
+            <p>KSH 14500</p>
+        </div>
+        <div class="image-container">
+            <img src="images/pet images/Baby daschmund.jpeg" alt="Golden Retriever 2">
+            <p>Daschund Puppy</p>
+            <p>21.Sep.2024</p>
+            <p>KSH 14500</p>
+        </div>
+        <div class="image-container">
+            <img src="images/pet images/Beautiful dogs wallpapers for Android iPhone in 4K by-Smokie.jpeg" alt="Golden Retriever 2">
             <p>Golden Retriever</p>
             <p>21.Sep.2024</p>
             <p>KSH 14500</p>
         </div>
         <div class="image-container">
-            <img src="golden-retriever-2.jpg" alt="Golden Retriever 2">
-            <p>Golden Retriever</p>
+            <img src="images/pet images/corgi.jpeg" alt="Golden Retriever 2">
+            <p>corgi</p>
             <p>21.Sep.2024</p>
             <p>KSH 14500</p>
         </div>
         <div class="image-container">
-            <img src="golden-retriever-2.jpg" alt="Golden Retriever 2">
-            <p>Golden Retriever</p>
+            <img src="images/pet images/DOG.jpeg" alt="Golden Retriever 2">
+            <p>rotweilerr</p>
             <p>21.Sep.2024</p>
             <p>KSH 14500</p>
         </div>
         <div class="image-container">
-            <img src="golden-retriever-2.jpg" alt="Golden Retriever 2">
-            <p>Golden Retriever</p>
+            <img src="images/pet images/Ginger cat.jpeg" alt="Golden Retriever 2">
+            <p>ginger cat</p>
             <p>21.Sep.2024</p>
             <p>KSH 14500</p>
         </div>
         <div class="image-container">
-            <img src="golden-retriever-2.jpg" alt="Golden Retriever 2">
-            <p>Golden Retriever</p>
+            <img src="images/pet images/nina-zaychenko-s2qZC3inAXU-unsplash.jpg" alt="Golden Retriever 2">
+            <p>Parakeet</p>
             <p>21.Sep.2024</p>
             <p>KSH 14500</p>
         </div>
         <div class="image-container">
-            <img src="golden-retriever-2.jpg" alt="Golden Retriever 2">
-            <p>Golden Retriever</p>
+            <img src="images/pet images/Wallpaper 📱.jpeg" alt="Golden Retriever 2">
+            <p>husky</p>
             <p>21.Sep.2024</p>
             <p>KSH 14500</p>
         </div>
         <div class="image-container">
-            <img src="golden-retriever-2.jpg" alt="Golden Retriever 2">
-            <p>Golden Retriever</p>
+            <img src="images/pet images/Siberian Husky (1).jpeg" alt="Golden Retriever 2">
+            <p>siberian husky</p>
             <p>21.Sep.2024</p>
             <p>KSH 14500</p>
         </div>
         <div class="image-container">
-            <img src="golden-retriever-2.jpg" alt="Golden Retriever 2">
-            <p>Golden Retriever</p>
-            <p>21.Sep.2024</p>
-            <p>KSH 14500</p>
-        </div>
-        <div class="image-container">
-            <img src="golden-retriever-2.jpg" alt="Golden Retriever 2">
-            <p>Golden Retriever</p>
-            <p>21.Sep.2024</p>
-            <p>KSH 14500</p>
-        </div>
-        <div class="image-container">
-            <img src="golden-retriever-2.jpg" alt="Golden Retriever 2">
-            <p>Golden Retriever</p>
-            <p>21.Sep.2024</p>
-            <p>KSH 14500</p>
-        </div>
-        <div class="image-container">
-            <img src="golden-retriever-2.jpg" alt="Golden Retriever 2">
-            <p>Golden Retriever</p>
+            <img src="images/pet images/834010424742342620.jpeg" alt="Golden Retriever 2">
+            <p>dalmatians</p>
             <p>21.Sep.2024</p>
             <p>KSH 14500</p>
         </div>

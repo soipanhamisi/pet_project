@@ -7,7 +7,7 @@
     border-radius: 10px;
     }
     header {
-        background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+        background-color: rgba(255, 255, 255, 0); /* Semi-transparent white */
       }
     .navbar-button{
     background-color: #ffc107;

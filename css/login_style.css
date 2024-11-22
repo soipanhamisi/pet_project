@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space elements evenly */
+    align-items: center; /* Align elements vertically */
+}
+
+.logo {
+    text-align: left;
+    margin-bottom: 20px;
+    
+}
+
+.logo img {
+    width: 150px;
+}
+
+.form-container {
+    width: 50%; /* Adjust the width as needed */
+    border: none;
+    padding: 30px;
+    background-color: none;
+    border-radius: none;
+
+}
+
+.image-container {
+    width: 50%; /* Adjust the width as needed */
+}
+
+.image-container img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.social-login button {
+    flex: 1;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+}
+
+.social-login button img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.social-login button span {
+    /* Ensure visibility */
+    display: inline-block;
+    color: black;
+    /* Add styling as needed */
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+    }
+
+    .form-container, .image-container {
+        width: 100%; /* Make each element full width */
+    }
+}
