@@ -61,21 +61,24 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="images/pet1.jpg" alt="Pet 1" class="d-block w-100">
+                <img src="https://cdn.britannica.com/92/212692-050-D53981F5/labradoodle-dog-stick-running-grass.jpg" 
+                alt="Pet 1" class="d-block w-100">
                 <div class="carousel-caption d-none d-md-block">
                     <h1 class="display-4" style="color: #F5F5DC;">Welcome to Pet Adoption Site!</h1>
                     <p class="lead" style="color: #F5F5DC;">Find your new best friend today!</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="images/pet2.jpg" alt="Pet 2" class="d-block w-100">
+                <img src="https://cdn.britannica.com/79/232779-050-6B0411D7/German-Shepherd-dog-Alsatian.jpg" 
+                alt="Pet 2" class="d-block w-100">
                 <div class="carousel-caption d-none d-md-block">
                     <h1 class="display-4" style="color: #F5F5DC;">Welcome to Pet Adoption Site!</h1>
                     <p class="lead" style="color: #F5F5DC;">Find your new best friend today!</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="images/pet3.jpg" alt="Pet 3" class="d-block w-100">
+                <img src="https://as1.ftcdn.net/v2/jpg/03/09/95/86/1000_F_309958604_8l3sg4PV8dTU5YbX4DF2oymMkLNarilp.jpg" 
+                alt="Pet 3" class="d-block w-100">
                 <div class="carousel-caption d-none d-md-block">
                     <h1 class="display-4" style="color: #F5F5DC;">Welcome to Pet Adoption Site!</h1>
                     <p class="lead" style="color: #F5F5DC;">Find your new best friend today!</p>
@@ -97,10 +100,10 @@
             <!-- Example pet cards -->
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                    <img src="images/pet1.jpg" alt="Pet 1">
+                    <img src="https://cdn.britannica.com/84/232784-050-1769B477/Siberian-Husky-dog.jpg" alt="Pet 1">
                     <div class="card-body">
-                        <h5 class="card-title">Pet 1</h5>
-                        <p class="card-text">Description of Pet 1.</p>
+                        <h5 class="card-title">Siberian Husky</h5>
+                        <p class="card-text">Description of Pet 1. breed of working dog raised in Siberia by the Chukchi people, who valued it as a sled dog and companion.As befits its long-distance sled racing heritage, the Siberian Husky is an active breed that needs at least one to two hours of exercise daily. Dog sledding, skijoring, bikejoring, or any activity involving pulling and running are especially well suited for the breed. The Siberian Husky is active, independent, mischievous, and playful. It gets along fairly well with other dogs and pets and is outgoing toward strangers. </p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -128,9 +131,9 @@
                     const petName = petCard.querySelector('.card-title').innerText;
 
                     if (buttonType === 'View') {
-                        alert("Viewing details of ${petName}");
+                        alert(`Viewing details of ${petName}`);
                     } else if (buttonType === 'Adopt') {
-                        alert("Thank you for choosing to adopt ${petName}!");
+                        alert(`Thank you for choosing to adopt"+ ${petName}!`);
                         petCard.parentElement.remove();
                     }
                 
