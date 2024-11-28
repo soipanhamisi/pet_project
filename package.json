@@ -1,0 +1,12 @@
+{
+  "name": "pet_project",
+  "version": "1.0.0",
+  "description": "\"# pet_website\" \r Make sure you have NodeJS installed\r Database is stored locally and designed by drawsql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
