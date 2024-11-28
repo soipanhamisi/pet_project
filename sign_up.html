@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Sign Up</h1>
-        <form>
+        <form id="signUpForm">
             <div class="form-group">
                 <label for="username"><i class="fa fa-user"></i> Username</label>
                 <input type="text" id="username" name="username" placeholder="Enter your username">
@@ -41,5 +41,31 @@
             <p>Already have an account? <a href="#">Log In</a></p>
         </form>
     </div>
+
+    <script type="module">
+        import { createUserWithEmailAndPassword } from './firebase.js'; // Import the function
+      
+        const signUpForm = document.getElementById('signUpForm');
+      
+        signUpForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+      
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+      
+          createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+              const user = userCredential.user;
+              console.log('User signed up: ', user);
+              // Redirect or update UI after successful signup
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              console.error('Error signing up: ', errorCode, errorMessage);
+            });
+        });
+      </script>
+
 </body>
 </html>
