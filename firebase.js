@@ -28,3 +28,4 @@ const db = getFirestore(app);
 
 // Export Firebase services for use in other files
 export { auth, db, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, collection, addDoc, getDocs };
+

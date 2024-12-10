@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petworld</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/navbar&footer.css">
+    <link rel="stylesheet" href="css/homepage_style.css">
+    <style>
+.image-grid {
+
+}
+
+.image-container {
+   
+}
+    .search-section {
+  display: flex;
+  justify-content: space-between; /* Space between filter text and search input */
+  align-items: center;
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.filter-icon {
+  margin-left: 10%; /* 10% space between filter text and icon */
+  margin-right: 15%; /* 15% space between icon and input */
+}
+
+input[type="text"] {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 0 10px;
+  width: 577px;
+  height: 48px;
+}
+.image-grid {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-container {
+    width: 32%; /* Adjust width for 3 columns */
+    text-align: center;
+    margin-bottom: 20px;
+    object-fit: fill;
+}
+.image-container img {
+    width: 100%; /* This keeps the image responsive */
+    height: 350px; /* Set a fixed height */
+     /* This will crop the image to fit the container */
+}
+
+.image-container p {
+    margin: 5px 0;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="images/Logo.png" alt="Your Logo" height="30">
+              </a>   
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/login">
+                            <button class="navbar-button">login</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="search-section">
+        <div class="search-container">
+            <h4>Filters  </h4> 
+          <div class="filter-icon">
+            <img src="images/Vector (2).png" alt="Filter Icon">
+          </div>
+          <input type="text" placeholder="Search for products..." />
+        </div>
+      </section>
+      <section class="image-grid">
+        <div class="image-container">
+            <img src="images/pet images/9 African Dog Breeds That Are Affectionate, Brave and Absolutely Adorable.jpeg" alt="Golden Retriever 1">
+            <p>Golden Retriever</p>
+            <p>21.Sep.2024</p>
+            <p>KSH 14500</p>
+        </div>
+        <div class="image-container">
+            <img src="images/pet images/18b4c27d-9f5f-41a3-b6d3-98d2bd714304.jpeg" alt="Golden Retriever 2">
+            <p>grey cat</p>
+            <p>21.Sep.2024</p>
+            <p>KSH 14500</p>
+        </div>
+        <div class="image-container">
+            <img src="images/pet images/40 Medium-Sized Dog Breeds That Are the Perfect First Pet for Any Family.jpeg" alt="Golden Retriever 2">
+            <p>mountain dog</p>
+            <p>21.Sep.2024</p>
+            <p>KSH 14500</p>
+        </div>
+        <div class="image-container">
+            <img src="images/pet images/Baby daschmund.jpeg" alt="Golden Retriever 2">
+            <p>Daschund Puppy</p>
+            <p>21.Sep.2024</p>
+            <p>KSH 14500</p>
+        </div>
+        <div class="image-container">
+            <img src="images/pet images/Beautiful dogs wallpapers for Android iPhone in 4K by-Smokie.jpeg" alt="Golden Retriever 2">
+            <p>Golden Retriever</p>
+            <p>21.Sep.2024</p>
+            <p>KSH 14500</p>
+        </div>
+        <div class="image-container">
+            <img src="images/pet images/corgi.jpeg" alt="Golden Retriever 2">
+            <p>corgi</p>
+            <p>21.Sep.2024</p>
+            <p>KSH 14500</p>
+        </div>
+        <div class="image-container">
+            <img src="images/pet images/DOG.jpeg" alt="Golden Retriever 2">
+            <p>rotweilerr</p>
+            <p>21.Sep.2024</p>
+            <p>KSH 14500</p>
+        </div>
+        <div class="image-container">
+            <img src="images/pet images/Ginger cat.jpeg" alt="Golden Retriever 2">
+            <p>ginger cat</p>
+            <p>21.Sep.2024</p>
+            <p>KSH 14500</p>
+        </div>
+        <div class="image-container">
+            <img src="images/pet images/nina-zaychenko-s2qZC3inAXU-unsplash.jpg" alt="Golden Retriever 2">
+            <p>Parakeet</p>
+            <p>21.Sep.2024</p>
+            <p>KSH 14500</p>
+        </div>
+        <div class="image-container">
+            <img src="images/pet images/Wallpaper 📱.jpeg" alt="Golden Retriever 2">
+            <p>husky</p>
+            <p>21.Sep.2024</p>
+            <p>KSH 14500</p>
+        </div>
+        <div class="image-container">
+            <img src="images/pet images/Siberian Husky (1).jpeg" alt="Golden Retriever 2">
+            <p>siberian husky</p>
+            <p>21.Sep.2024</p>
+            <p>KSH 14500</p>
+        </div>
+        <div class="image-container">
+            <img src="images/pet images/834010424742342620.jpeg" alt="Golden Retriever 2">
+            <p>dalmatians</p>
+            <p>21.Sep.2024</p>
+            <p>KSH 14500</p>
+        </div>
+        
+
+        </section>
+    <section class="mailing-list">
+        <h2>Join Our Mailing List</h2>
+        <p>Sign up to receive inspiration, pet updates, and special offers from our team.</p>
+        <form action="#">
+            <input type="email" placeholder="example@gmail.com" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="images/Logo.png" alt="PetWorld Logo">
+            <p>© PETWORLD 2024</p>
+            <ul>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Terms of use</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li>Our story</li>
+                <li>FAQ</li>
+                <li>Contact</li>
+            </ul>
+            <ul>
+                <li>Pet care</li>
+                <li>Treatments</li>
+                <li>Health</li>
+                <li>Hygiene</li>
+            </ul>
+            <ul>
+                <li>Shop</li>
+                <li>Pet Food</li>
+                <li>Toys</li>
+                <li>Accessories</li>
+            </ul>
+            <ul class="social-media">
+                <li><a href="#"><img src="images/Facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images/Twitter.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="images/Instagram.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="images/Linkedin.png" alt="Linkedin"></a></li>
+              </ul>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petworld</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        
+        body {
+            font-family: sans-serif;
+            width: 90%; /* Adjust the width as needed */
+            margin: 0 auto; /* Center the element horizontally */
+        }
+        * {
+            border-radius: 10px;
+            }
+        .navbar-button{
+            background-color: #ffc107;
+            color: rgb(0, 0, 0);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+        .navbar-nav {
+        flex-direction: column; /* Make items vertical */
+        align-items: center; /* Center items horizontally */
+        }
+
+        .navbar-nav .nav-item {
+        margin-bottom: 10px; /* Add spacing between items */
+        }
+        .hero-section {
+            padding: 50px 0;
+        }
+        .hero-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .hero-text {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        .hero-button {
+            background-color: #ffc107;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .stats-section {
+        display: flex;
+        justify-content: center;
+        background-color: #e6e6e6;
+        padding: 50px 0;
+        }
+
+        .stat {
+        text-align: center;
+        flex: 1;
+        }
+        .stat img {
+        margin-left: 10px; /* Adjust margin as needed */
+        }
+
+        .stat {
+        text-align: center;
+        flex: 1; /* Ensures equal width for each stat */
+        }
+
+
+        .stats-section .stat {
+        display: inline-block;
+        margin: 0 20px; /* Adjust margin as needed */
+        }
+
+        .stats-section img {
+        width: 50px; /* Adjust image size as needed */
+        margin-bottom: 10px;
+        }
+
+        .stats-section p {
+        font-size: 16px;
+        margin: 0;
+        }
+
+        .stats-section p:first-child {
+        font-size: 24px;
+        font-weight: bold;
+        }
+        .section {
+            text-align: center;
+            max-width: 1200px; /* Increase max-width to allow spreading */
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #e8e8e8; /* Light background color for contrast */
+            border-radius: 15px;
+            
+        }
+        .section h2 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around; /* Spread out items evenly */
+            align-items: center;
+            flex-wrap: wrap; /* Wrap items on smaller screens */
+            gap: 40px; /* Space between items */
+            padding: 5px;
+        }
+        .service {
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f0f3ff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            flex-basis: 18%;
+            cursor: pointer;
+        }
+        .service:hover {
+            transform: scale(1.05);
+        }
+        .service img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .service p {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+        }
+        .service-section {
+            padding: 50px 0;
+        }
+        .service-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .service-icon {
+            font-size: 48px;
+            color: #ffc107;
+            margin-bottom: 20px;
+        }
+        .service-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .service-text {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+            .reviews-section {
+            text-align: center;
+            max-width: 100%;
+            margin: 40px auto;
+            position: relative;
+            overflow:hidden;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        .reviews-section {
+            text-align: center;
+            max-width: 200%; /* Adjust as needed */
+            margin: 40px;
+            position: relative;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        .reviews-section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .reviews-container {
+            display: flex;
+            justify-content: space-between; /* Space items evenly */
+            gap: 20px; /* Add space between each review card */
+            overflow: hidden;
+            scroll-behavior: smooth;
+            width: 100%; /* Make the container span the full width */
+        }
+
+        .review-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1; /* Allow the cards to expand based on available space */
+            text-align: left;
+            min-width: 250px; /* Minimum width for responsive design */
+            max-width: 300px; /* Control max width to avoid too large cards */
+            flex-shrink: 0; /* Prevent cards from shrinking */
+        }
+        .review-card h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .review-card p {
+            font-size: 14px;
+            color: #555;
+        }
+        .stars {
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+        .arrows {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            top: -50px;
+            color: #333;
+        }
+        .arrow {
+            font-size: 24px;
+            cursor: pointer;
+            user-select: none;
+            padding: 10px;
+            transition: color 0.2s;
+        }
+        .arrow:hover {
+            color: #555;
+        }
+        .testimonial-section {
+            background-color: #f2f2f2;
+            padding: 50px 0;
+        }
+ .testimonial-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial-text {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .testimonial-author {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .contact-section {
+            padding: 50px 0;
+        }
+        .contact-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .contact-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .contact-text {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        .footer-section {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .service-icon-container {
+            text-align: center; /* Center the icon */
+            margin-bottom: 15px; /* Space between icon and title */
+        }
+
+        .service-icon {
+            width: 60px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .service-card {
+            text-align: center; /* Center align text */
+            padding: 20px; /* Add some padding for better spacing */
+            border: 1px solid #ddd; /* Optional: Add a border for better visibility */
+            border-radius: 8px; /* Optional: Rounded corners */
+            margin-bottom: 20px; /* Space between rows */
+            height: 100%; /* Ensure all cards have the same height */
+        }
+
+        .service-icon-container {
+            margin-bottom: 15px; /* Space between icon and title */
+        }
+
+        .service-icon {
+            width: 80px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Ensure the image does not overflow */
+        }
+        .wrapper {
+        display: flex;
+        justify-content: center; /* Centers the content horizontally */
+        }
+        .mailing-list {
+            text-align: center;
+            background-color: #7b28ce; /* Adjust background color as needed */
+            padding: 50px;
+        }
+
+        .mailing-list h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .mailing-list p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .mailing-list form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mailing-list input[type="email"] {
+            flex: 0 0 25%; /* Set width to 25% */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+
+        }
+
+        .mailing-list button[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            background-color: #ffc107;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .footer {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px;
+        background-color: #f0f0f0; /* Adjust background color as needed */
+    }
+
+    .footer-left {
+        flex: 1;
+    }
+
+    .footer-left img {
+        width: 150px; /* Adjust logo size as needed */
+        margin-bottom: 20px;
+    }
+
+    .footer-left p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .footer-left ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-left li {
+        margin-bottom: 5px;
+    }
+
+    .footer-left a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .footer-right {
+        flex: 3;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-right ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-right li {
+        margin-bottom: 10px;
+    }
+
+    .footer-right a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .social-media {
+        display: flex;
+    }
+
+    .social-media li {
+        margin-right: 10px;
+    }
+
+    .social-media a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .social-media a:hover {
+        color: #007bff;
+    }
+    .footer-left, .footer-right {
+        text-align: center; /* Center the content within each section */
+    }
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 20px;
+        background-color: #f0f0f0;
+    }
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-right {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-right ul {
+        margin-bottom: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="images/Logo.png" alt="Your Logo" height="30">
+              </a>   
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/login">
+                            <button class="navbar-button">login</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="hero-title">Your pet, <br> our Priority </h1>
+                    <p class="hero-text">Find our shelter where stray, lost, abandoned or surrendered pets are housed.
+                        Find your best friend here!</p>
+                    <button class="hero-button">Make an Appointment</button>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/[removal.ai]_cb3892f8-0e57-44e9-9e04-8bf300f86cc8-dogs-personalities 1 (1).png" alt="Petworld Image" width="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="stats-section">
+        <div class="section">
+            <h2>What we excel in:</h2>
+            <div class="services">
+                <div class="service">
+                    <img src="images/Barbershop.png" alt="Grooming">
+                    <p>Grooming</p>
+                </div>
+                <div class="service">
+                    <img src="images/Treatment.png" alt="Health">
+                    <p>Health</p>
+                </div>
+                <div class="service">
+                    <img src="images/Shopping Basket Star.png" alt="Buy pet">
+                    <p>Buy pet</p>
+                </div>
+                <div class="service">
+                    <img src="images/Heart with dog paw.png" alt="Adopt">
+                    <p>Adopt</p>
+                </div>
+                <div class="service">
+                    <img src="images/Dog Training.png" alt="Training">
+                    <p>Training</p>
+                </div>
+            </div>
+        </div>
+      </section>
+      <div class="reviews-section">
+        <h2>Our Happy Customers</h2>
+        <div class="arrows">
+            <span class="arrow" onclick="scrollLeft()">&#8592;</span>
+            <span class="arrow" onclick="scrollRight()">&#8594;</span>
+        </div>
+        <div class="reviews-container" id="reviewsContainer">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <h3>Sarah M.</h3>
+                <p>“I'm blown away by the quality and style of the clothes I received from Shopza. Every piece has exceeded my expectations.”</p>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <h3>Alex K.</h3>
+                <p>“Finding clothes that align with my personal style used to be a challenge until I discovered Shopza. Their range is remarkable.”</p>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <h3>Emily R.</h3>
+                <p>“From casual wear to elegant dresses, Shopza offers a variety that caters to all my fashion needs. Highly recommend!”</p>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <h3>John D.</h3>
+                <p>“The quality of materials and unique designs make Shopza stand out. I've received so many compliments on my outfits.”</p>
+            </div>
+        </div>
+    </div>
+            <span class="arrow" onclick="scrollRight()">&#8594;</span>
+        </div>
+    </div>
+    </div><br><br>
+    <section class="mailing-list">
+        <h2>Join Our Mailing List</h2>
+        <p>Sign up to receive inspiration, pet updates, and special offers from our team.</p>
+        <form action="#">
+            <input type="email" placeholder="example@gmail.com" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="images/Logo.png" alt="PetWorld Logo">
+            <p>© PETWORLD 2024</p>
+            <ul>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Terms of use</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li>Our story</li>
+                <li>FAQ</li>
+                <li>Contact</li>
+            </ul>
+            <ul>
+                <li>Pet care</li>
+                <li>Treatments</li>
+                <li>Health</li>
+                <li>Hygiene</li>
+            </ul>
+            <ul>
+                <li>Shop</li>
+                <li>Pet Food</li>
+                <li>Toys</li>
+                <li>Accessories</li>
+            </ul>
+            <ul class="social-media">
+                <li><a href="#"><img src="images/Facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images/Twitter.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="images/Instagram.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="images/Linkedin.png" alt="Linkedin"></a></li>
+              </ul>
+        </div>
+    </footer>
+    <script>
+        const reviewsContainer = document.getElementById('reviewsContainer');
+        let scrollAmount = 0;
+
+        function scrollRight() {
+            scrollAmount += 270; // Adjust to the width of each review card plus spacing
+            if (scrollAmount >= reviewsContainer.scrollWidth - reviewsContainer.clientWidth) {
+                scrollAmount = reviewsContainer.scrollWidth - reviewsContainer.clientWidth;
+            }
+            reviewsContainer.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollLeft() {
+            scrollAmount -= 270; // Adjust to the width of each review card plus spacing
+            if (scrollAmount < 0) {
+                scrollAmount = 0;
+            }
+            reviewsContainer.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
