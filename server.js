@@ -4,6 +4,7 @@ import ejs from 'ejs';
 import bodyParser from 'body-parser';
 import {createUser} from './signup.js';
 import { signInUser } from './login.js';
+import {addNewPet} from './newpet.js';
 
 const app = express();
 const PORT = 3000;
@@ -42,8 +43,23 @@ app.get('/newpet', (req, res)=>{
     res.render('addnewpet.html');
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+app.post('/newpet', async (req, res)=>{
+    const petData = {
+        petNickName: req.body.nickname,
+        petBreedName: req.body.breedname,
+        Description: req.body.description,
+        Gender: req.body.gender,
+        Age: req.body.age,
+        Checklist: req.body.checklist,
+        Category: req.body.category
+    }
+    console.log(petData);
+    try {
+        await addNewPet(petData);
+       
+      } catch (error) {
+        console.error("Error in /newpet route:", error);
+      }
 });
 
 app.post('/signup', async (req, res) => {
@@ -75,4 +91,9 @@ app.post('/login', async(req, res)=> {
     } catch(err) {
         res.send('Error: '+ err.message);
     }
+});
+
+
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
 });
