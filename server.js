@@ -38,6 +38,10 @@ app.get('/signup', (req, res)=>{
     res.render('signup');
 });
 
+app.get('/newpet', (req, res)=>{
+    res.render('addnewpet.html');
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
