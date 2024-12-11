@@ -56,7 +56,7 @@ app.post('/newpet', async (req, res)=>{
     console.log(petData);
     try {
         await addNewPet(petData);
-       
+        res.redirect('/catalogue');       
       } catch (error) {
         console.error("Error in /newpet route:", error);
       }
